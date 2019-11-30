@@ -9,5 +9,14 @@ module Types
     def test_field
       "Hello World!"
     end
+    
+    # field :specialty, SpecialtyTyoe, null: true do,
+    #   description "Find a post by ID"
+    # argument :id, ID, required: true
+    # end
+    # def specialty(id:)
+    #   Specialty.find(id)
+    # end
+
   end
 end
