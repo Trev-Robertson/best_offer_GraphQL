@@ -3,7 +3,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
 
-#GraphQl Gem
+# pry
+gem 'pry'
+
+# GraphQl Gem
 gem 'graphql'
 gem "graphiql-rails"
 
