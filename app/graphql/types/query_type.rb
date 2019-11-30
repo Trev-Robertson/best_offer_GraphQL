@@ -10,13 +10,22 @@ module Types
       "Hello World!"
     end
     
-    # field :specialty, SpecialtyTyoe, null: true do,
-    #   description "Find a post by ID"
-    # argument :id, ID, required: true
-    # end
-    # def specialty(id:)
-    #   Specialty.find(id)
+
+    field :specialty, [SpecialtyType], null: false,
+    description: "list of specialties"
+  def specialty
+    Specialty.all
+  end
+
+
+
+    # field :specialty, [SpecialtyType], null: false,
+    #   description: "Find a specialty by ID"
+    
+    # def specialty
+    #   Specialty.all
     # end
 
   end
+
 end

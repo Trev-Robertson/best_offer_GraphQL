@@ -1,8 +1,10 @@
 module Types
   class SpecialtyType < Types::BaseObject
-    description: 'A list of Specialty types'
-    field :id, ID, null: false 
-    field :name, Types::StringType, null: true
+    field :name, String, null: false,
+    description: "the ID"
+    field :id, ID, null: false,
+      description: "the ID"
+
 
   end
 end
