@@ -38,13 +38,22 @@ module Types
           User.find(id)
       end
 
-
-    # field :specialty, [SpecialtyType], null: false,
-    #   description: "Find a specialty by ID"
-    
-    # def specialty
-    #   Specialty.all
-    # end
+      field :task, TaskType, null: true do
+        description "Find a Task"
+        argument :id, ID, required: true
+        end
+        
+        def task(id:)
+            Task.find(id)
+        end
+  
+      field :tasks, [TaskType], null: true do
+        description "List all Tasks"
+        end
+        
+        def tasks
+            Task.all
+        end
 
   end
 
