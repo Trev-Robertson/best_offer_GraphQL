@@ -1,5 +1,5 @@
 module Types
-  class UserType < Types::BaseObject
+  class ContractorType < Types::BaseObject
     field :name, String, null: true
     field :password_digest, String, null: true
     field :img_url, String, null: true

@@ -5,7 +5,7 @@ module Types
     field :specialty, SpecialtyType, null: true
     field :description, String, null: true
     field :task_done, Boolean, null: true
-    field :id, ID, null: false,
-    description: "A List Tasks"
+    field :id, ID, null: false
+    
   end
 end
