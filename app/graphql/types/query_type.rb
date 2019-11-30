@@ -11,12 +11,32 @@ module Types
     end
     
 
-    field :specialty, [SpecialtyType], null: false,
-    description: "list of specialties"
-  def specialty
-    Specialty.all
-  end
+    field :specialty, SpecialtyType, null: true do
+    description "Find a Specialty"
+    argument :id, ID, required: true
+    end
+    
+    def specialty(id:)
+        Specialty.find(id)
+    end
 
+    field :specialties, [SpecialtyType], null: true do
+      description "List all Specialties"
+      end
+      
+      def specialties
+          Specialty.all
+      end
+
+
+      field :user, UserType, null: true do
+      description "Find a User"
+      argument :id, ID, required: true
+      end
+      
+      def user(id:)
+          User.find(id)
+      end
 
 
     # field :specialty, [SpecialtyType], null: false,
