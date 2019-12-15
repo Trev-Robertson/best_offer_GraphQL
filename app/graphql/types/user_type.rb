@@ -5,5 +5,8 @@ module Types
     field :img_url, String, null: true
     field :phone_number, String, null: true
     field :id, ID, null: false
+    field :tasks, [TaskType], null: true
+    field :reviews, [ReviewType], null: true
+
   end
 end
